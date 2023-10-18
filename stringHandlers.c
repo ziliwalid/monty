@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * asciiPrinter - Prints the Ascii value.
+ * asciiPrinter - prints ascii value
  * @stck: stack param
  * @ln: line number param
  * Return: void
