@@ -1,18 +1,5 @@
 #include "monty.h"
 /**
- * worthlessFunc - Does nothing.
- * @stck: stack param
- * @line_number: line num param
- * Return: void
- */
-void worthlessFunc(stack_t **stck, unsigned int line_number)
-{
-	(void)stck;
-	(void)line_number;
-}
-
-
-/**
  * swapNodes - swaps the top two elements of stack
  * @stck: stack param
  * @line_number: line num param
@@ -76,6 +63,19 @@ void subNodes(stack_t **stack, unsigned int line_number)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+
+/**
+ * worthlessFunc - does absolutely nothing
+ * @stck: stack param
+ * @line_number: line num param
+ * Return: void
+ */
+void worthlessFunc(stack_t **stck, unsigned int line_number)
+{
+	(void)stck;
+	(void)line_number;
+}
+
 
 
 /**
