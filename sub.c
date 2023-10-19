@@ -1,22 +1,29 @@
 #include "monty.h"
+
 /**
- * subNodes - subs the top two elements of stack
- * @stck: stack param
- * @line_number: line num param
+ * subNodes - subtracts the top two elements of the stack
+ * @stack: stack parameter
+ * @line_number: line number parameter
  * Return: void
  */
 void subNodes(stack_t **stack, unsigned int line_number)
 {
-	int sum;
+    int sum;
+    stack_t *current, *previous;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+    if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+    {
+        errorHandler2(8, line_number, "sub");
+        return;
+    }
 
-		errorHandler2(8, line_number, "sub");
-
-
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n - (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+    current = *stack;
+    previous = current->prev;
+    current = current->next;
+    
+    sum = current->n - previous->n;
+    current->n = sum;
+    free(previous);
+    current->prev = NULL;
 }
+
