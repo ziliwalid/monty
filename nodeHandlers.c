@@ -1,27 +1,23 @@
 #include "monty.h"
 stack_t *head = NULL;
-/**
- * add_Node - adds node to a specific stacl
- * @n_Node: Pointer to the new node.
- * @ln: Interger representing the line number of of the opcode
- * Return: void nada.
- */
-void add_Node(stack_t **n_Node, __attribute__((unused))unsigned int ln)
-{
-	stack_t *tmp;
 
+/**
+ * add_Node - adds a node to a specific stack
+ * @n_Node: Pointer to the new node.
+ * @ln: Integer representing the line number of the opcode (unused attribute)
+ * Return: void
+ */
+void add_Node(stack_t **n_Node, __attribute__((unused)) unsigned int ln)
+{
 	if (n_Node == NULL || *n_Node == NULL)
 		exit(EXIT_FAILURE);
-	if (head == NULL)
-	{
-		head = *n_Node;
-		return;
-	}
-	tmp = head;
+	
+	(*n_Node)->next = head;
+	if (head != NULL)
+		head->prev = *n_Node;
 	head = *n_Node;
-	head->next = tmp;
-	tmp->prev = head;
 }
+
 
 /**
  * addToQ - adds a node to a specific queue
