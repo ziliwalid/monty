@@ -69,10 +69,23 @@ void worthlessFunc(stack_t **, unsigned int);
 /*matches ops with nodes*/
 void addNodes(stack_t **, unsigned int);
 void subNodes(stack_t **, unsigned int);
-void divNodes(stack_t **, unsigned int);
 void swapNodes(stack_t **, unsigned int);
 void modNodes(stack_t **, unsigned int);
 void mulNodes(stack_t **, unsigned int);
 
 #endif /*MONTYYYYYYYYYY*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -9,8 +9,7 @@
  */
 void operatorHandler(char *operatorC, char *value, int ln, int format)
 {
-	int i;
-	int flag;
+	int i, f;
 
 	instruction_t func_list[] = {
 		{"push", add_Node},
@@ -21,7 +20,6 @@ void operatorHandler(char *operatorC, char *value, int ln, int format)
 		{"swap", swapNodes},
 		{"add", addNodes},
 		{"sub", subNodes},
-		{"div", divNodes},
 		{"mul", mulNodes},
 		{"mod", modNodes},
 		{"pchar", asciiPrinter},
@@ -35,16 +33,19 @@ void operatorHandler(char *operatorC, char *value, int ln, int format)
 	{
 		return;
 	}
-	for (flag = 1, i = 0; func_list[i].opcode != NULL; i++)
+	for (f = 1, i = 0; func_list[i].opcode != NULL; i++)
 	{
 		if (strcmp(operatorC, func_list[i].opcode) == 0)
 		{
 			callFunction(func_list[i].f, operatorC, value, ln, format);
-			flag = 0;
+			f = 0;
 		}
 	}
-	if (flag == 1)
+	if (f == 1)
+	{
 		errorHandler1(3, ln, operatorC);
+		return;
+	}
 }
 
 /**
