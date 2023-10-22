@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * errorHandler - prints error codes accordling to their code (1,2,3,4....)
+ * errorHandler1 - prints error codes accordling to their code (1,2,3,4....)
  * @errCode: error codes
  * Return: Void NADA :)
  */

@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * stringPrinter - prints string.
- * @stck: stack param
+ * @stack: stack param
  * @ln: line number param
  * Return: void
  */
