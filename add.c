@@ -10,7 +10,7 @@ void addNodes(stack_t **stck, unsigned int line_number)
 {
 	int sum;
 	stack_t *current, *previous;
-	
+
 	if (stck == NULL || *stck == NULL || (*stck)->next == NULL)
 	{
 		errorHandler2(8, line_number, "add");

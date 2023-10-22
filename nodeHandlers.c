@@ -1,4 +1,5 @@
 #include "monty.h"
+
 stack_t *head = NULL;
 
 /**
@@ -11,7 +12,7 @@ void add_Node(stack_t **n_Node, __attribute__((unused)) unsigned int ln)
 {
 	if (n_Node == NULL || *n_Node == NULL)
 		exit(EXIT_FAILURE);
-	
+
 	(*n_Node)->next = head;
 	if (head != NULL)
 		head->prev = *n_Node;

@@ -14,7 +14,7 @@ void swapNodes(stack_t **stck, unsigned int line_number)
 
 	if (stck == NULL || *stck == NULL || (*stck)->next == NULL)
 	{
-		 errorHandler2(8, line_number, "swap");
+		errorHandler2(8, line_number, "swap");
 	}
 	first = *stck;
 	second = first->next;

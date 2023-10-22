@@ -10,13 +10,13 @@ void subNodes(stack_t **stack, unsigned int line_number)
 {
 	int sum;
 	stack_t *current, *previous;
-	
+
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		errorHandler2(8, line_number, "sub");
 		return;
 	}
-	
+
 	current = *stack;
 	previous = current->prev;
 	current = current->next;

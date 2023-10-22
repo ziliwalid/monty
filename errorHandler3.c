@@ -1,15 +1,17 @@
 #include "monty.h"
+
 /**
  * errorHandler3 - handles errors
  * @errCode: error codes
  * Return: Void
  */
+
 void errorHandler3(int errCode, ...)
 {
 	va_list arg;
 	int argNum;
 
-	va_start(arg, errCode);
+	va_start(airg, errCode);
 	argNum = va_arg(arg, int);
 	switch (errCode)
 	{
@@ -25,5 +27,4 @@ void errorHandler3(int errCode, ...)
 	freeNodes();
 	exit(EXIT_FAILURE);
 }
-/* could have put all these in one method but betty
-isn't cool :(*/
+/* could have put all these in one method but betty isn't cool :(*/
