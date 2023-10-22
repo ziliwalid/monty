@@ -11,7 +11,7 @@ void errorHandler3(int errCode, ...)
 	va_list arg;
 	int argNum;
 
-	va_start(airg, errCode);
+	va_start(arg, errCode);
 	argNum = va_arg(arg, int);
 	switch (errCode)
 	{
